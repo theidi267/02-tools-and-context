@@ -17,10 +17,6 @@ class List {
     }
 
     shift() {
-      let item = 
-
-
-
 
     }
 
