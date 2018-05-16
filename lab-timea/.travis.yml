@@ -3,7 +3,6 @@ node_js:
  - "10"
 
 before_script:
- - cd lab-justin
  - npm i
 
 script:
