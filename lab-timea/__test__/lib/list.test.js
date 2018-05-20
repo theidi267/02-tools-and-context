@@ -29,6 +29,25 @@ describe('List', () => {
     expect( myList.length ).toEqual(2);
   });
 
+  it('shift() returns the first item', () => {
+    let myList = loadList();
+    expect(myList.shift()).toEqual(testArray[0]);
+  });
+
+  it('shift() desrements .length property by one', () => {
+    let myList = loadList();
+    myList.shift();
+    expect(myList.length).toEqual(2);
+  });
+
+
+
+
+
+
+
+  
+
   it('forEach() does not run without callback', () => {
     function badForEach() {
       let myList = loadList();

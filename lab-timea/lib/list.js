@@ -35,12 +35,19 @@ class List {
       }
 
       return item; //so we can test against
-    }
+    };
 
+    // unshift(item){
+    //   let length = this.length
+    //   let array =[];
+    //   let i = 0;
 
-
-
-    unshift(item)
+    //   while (item[i]) {   
+        
+    //     array[i] = item[i];
+    //     i++
+    //   }
+    //  }
 
 
   
@@ -58,20 +65,15 @@ class List {
         result.push(callback(this[i], i));
       }
       return result;
-    }
+    };
 
-    filter()
+    filter(){};
 
+    reduce(){};
 
+    slice(){};
 
-    reduce()
-
-    slice()
-
-    splice()
-
-
-  
-  }
+    splice(){};  
+  };
   
   module.exports = List;
