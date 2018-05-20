@@ -17,17 +17,37 @@ class List {
     }
 
     shift() {
-      let item
+      let item = this[0];  //this is the item to delete
+      let array = [];      // have to make a new array for reindexing
+      let length = this.length;  //the length of the list
 
+      for (let i=0; i<length; i++){  //go through properties of the list
 
+        if (this[i+1]){ //if there is a next property
+          array[i] = this[i+1]; //assign teh new index in the new array
+        }
+        delete this[i]; //once done, delete the first propert(used to be item)
+        this.length-- //decrement the length property
+      }
 
+      for (let i=0; i<array.length; i++) { //now we have the properties as an array
+        this.push(array[i])   // pushing them back reindexed into the object
+      }
 
-    }
+      return item; //so we can test against
+    };
 
+    // unshift(item){
+    //   let length = this.length
+    //   let array =[];
+    //   let i = 0;
 
-
-
-    unshift()
+    //   while (item[i]) {   
+        
+    //     array[i] = item[i];
+    //     i++
+    //   }
+    //  }
 
 
   
@@ -45,20 +65,15 @@ class List {
         result.push(callback(this[i], i));
       }
       return result;
-    }
+    };
 
-    filter()
+    filter(){};
 
+    reduce(){};
 
+    slice(){};
 
-    reduce()
-
-    slice()
-
-    splice()
-
-
-  
-  }
+    splice(){};  
+  };
   
   module.exports = List;
