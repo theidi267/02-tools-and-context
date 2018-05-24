@@ -2,4 +2,4 @@
 
 const List = require('./lib/list.js');
 
-let myList = new List();
+let myList = new List(); //eslint-disable-line
