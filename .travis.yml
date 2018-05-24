@@ -3,12 +3,8 @@ node_js:
  - "10"
 
 before_script:
-<<<<<<< HEAD:lab-timea/.travis.yml
- - cd lab-timea
-=======
->>>>>>> 013d752affe17768669f054b611be810857f01b9:.travis.yml
  - npm i
 
 script:
- - npm run lint
+ - npm lint
  - npm test
