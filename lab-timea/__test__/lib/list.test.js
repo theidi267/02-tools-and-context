@@ -45,6 +45,19 @@ describe('List', () => {
     expect(myList.length).toEqual(2);
   });
 
+  it('unshift() returns new length of arrayafter adding element', () => {
+    let myList = ['V1', 'V2', 'V3'];
+    myList.unshift(3);
+    expect(myList.length).toEqual(4);
+  });
+
+  it('unshift() returns new length of arrayafter adding element', () => {
+    let myList = ['V1', 'V2', 'V3'];
+    myList.unshift(3);
+    expect(myList[1]).toEqual('V1');
+  });
+
+
   it('forEach() does not run without callback', () => {
     function badForEach() {
       let myList = loadList();
