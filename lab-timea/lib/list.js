@@ -25,22 +25,33 @@ class List {
 
   shift() {
     let item = this[0];  
-    let array = [];      // have to make a new array for reindexing
-    let length = this.length;  //the length of the list
+    let array = [];      
+    let length = this.length; 
      
-    for (let i=0; i<length; i++){  //go through properties of the list
-     
-      if (this[i+1]){ //if there is a next property
-        array[i] = this[i+1]; //assign teh new index in the new array
+    for (let i=0; i<length; i++){      
+      if (this[i+1]){ 
+        array[i] = this[i+1]; 
       }
-      delete this[i]; //once done, delete the first propert(used to be item)
-      this.length--; //decrement the length property
-    }
-     
-    for (let i=0; i<array.length; i++) { //now we have the properties as an array
-      this.push(array[i]);   // pushing them back reindexed into the object
+      delete this[i];
+      this.length--; 
+    }     
+    for (let i=0; i<array.length; i++) { 
+      this.push(array[i]);
     }
     return item;
+  }
+
+  unshift(data) {
+
+    let result = new List();
+    result.push(data); 
+
+    for (let i=0; i<this.length; i++) {
+
+      result.push(this[i]);     
+    }
+    console.log(result);
+    return result.length; 
   }
   
   map(callback) {
